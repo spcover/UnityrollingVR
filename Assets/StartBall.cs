@@ -12,7 +12,7 @@ public class StartBall : MonoBehaviour
 		AddForce(500f);
     }
 
-	void AddForce(float force){
+    void AddForce(float force){
 		float angle = Random.Range(-1f, 1f);
 		Vector3 direction = new Vector3(Mathf.Sin(angle*Mathf.PI), 0f, Mathf.Cos(angle*Mathf.PI));
         Rigidbody m_Rigidbody = GetComponent<Rigidbody>();
