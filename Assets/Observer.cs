@@ -34,4 +34,15 @@ public class Observer : MonoBehaviour
 			transform.Translate(speed * forward);
 		}
     }
+	private void OnCollisionEnter(Collision collision)
+    {
+		Rigidbody rb = GetComponent<Rigidbody>();		
+		rb.constraints = RigidbodyConstraints.FreezeRotation;
+    }
+	private void OnCollisionExit(Collision collision)
+    {
+		Rigidbody rb = GetComponent<Rigidbody>();		
+        rb.constraints = RigidbodyConstraints.None;
+    }
+
 }
