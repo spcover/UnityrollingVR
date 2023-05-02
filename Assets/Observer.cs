@@ -14,21 +14,24 @@ public class Observer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+		Vector3 view = Camera.main.transform.forward;
+		Vector3 forward = new Vector3(view.x, 0, view.z);
+		Vector3 right = new Vector3(forward.z, 0, -forward.x);
 		if(Input.GetKey(KeyCode.RightArrow))
 		{
-			transform.Translate(speed * new Vector3(1f, 0f, 0f));
+			transform.Translate(speed * right);
 		}
 		if(Input.GetKey(KeyCode.LeftArrow))
 		{
-			transform.Translate(-speed * new Vector3(1f, 0f, 0f));
+			transform.Translate(-speed * right);
 		}	
 		if(Input.GetKey(KeyCode.DownArrow))
 		{
-			transform.Translate(-speed * new Vector3(0f, 0f, 1f));
+			transform.Translate(-speed * forward);
 		}
 		if(Input.GetKey(KeyCode.UpArrow))
 		{
-			transform.Translate(speed * new Vector3(0f, 0f, 1f));
+			transform.Translate(speed * forward);
 		}
     }
 }
