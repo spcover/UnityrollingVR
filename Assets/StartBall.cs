@@ -8,7 +8,7 @@ public class StartBall : MonoBehaviour
 	float passed;
 	float total;
 	float limit = 180f;
-	static string[] balls = new string[]{"DirtBall", "CopperBall", "MarbleBall", "WaterBall", "SoccerBall", "TennisBall", "VolleyBall"};
+	static string[] balls = new string[]{"DirtBall", "CopperBall", "MarbleBall", "WaterBall", "SoccerBall", "SunBall", "TennisBall", "VolleyBall"};
 	static string[] trace = new string[balls.Length];
 	static int index = 0;
 
