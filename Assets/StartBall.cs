@@ -8,6 +8,7 @@ public class StartBall : MonoBehaviour
 	float passed;
 	float total;
 	float limit = 180f;
+	float points = 0.0f;
 	static string[] balls = new string[]{"DirtBall", "CopperBall", "MarbleBall", "WaterBall", "SoccerBall", "SunBall", "TennisBall", "VolleyBall"};
 	static string[] trace = new string[balls.Length];
 	static int index = 0;
@@ -45,7 +46,7 @@ public class StartBall : MonoBehaviour
 			trace[index] = name;
 			index = index + 1;
 			points = points + index;
-			Debug.Log(name + ":" + index);
+//			Debug.Log(name + ":" + index);
 		}
 	}
 
