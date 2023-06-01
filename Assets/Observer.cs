@@ -27,11 +27,11 @@ public class Observer : MonoBehaviour
 		}	
 		if(Input.GetKey(KeyCode.DownArrow))
 		{
-			transform.Translate(-speed * forward);
+			transform.Translate(-speed * 1.5f * forward);
 		}
 		if(Input.GetKey(KeyCode.UpArrow))
 		{
-			transform.Translate(speed * forward);
+			transform.Translate(speed * 1.5f * forward);
 		}
     }
 	private void OnCollisionEnter(Collision collision)
